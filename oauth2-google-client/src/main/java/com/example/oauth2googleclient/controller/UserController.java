@@ -1,17 +1,18 @@
 package com.example.oauth2googleclient.controller;
 
-import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
 
 import java.security.Principal;
 
-@Controller
+@RestController
 @RequestMapping("/user")
 class UserController {
 
-    @RequestMapping("/")
-    public String home(Principal user) {
-        return "Hello " + user.getName();
+    @GetMapping
+    public Principal home(Principal user) {
+        return user;
 
     }
 

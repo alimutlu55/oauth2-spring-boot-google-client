@@ -8,5 +8,6 @@ security:
       clientAuthenticationScheme: form
       scope:
         - email
+        - profile
     resource:
       userInfoUri: https://www.googleapis.com/oauth2/v3/userinfo
